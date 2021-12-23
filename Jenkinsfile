@@ -1,11 +1,3 @@
-pipeline{
-  agent any
-  stages{
-    stage("hello"){
-      steps{
-        echo "hello, Worls"
-      }
-    }
-  }
-} 
-  
+@Library("mohsina-shared-library") _
+import com.hexaware.sharedlib.SharedLibrary
+new SharedLibrary(steps).startBuild()
